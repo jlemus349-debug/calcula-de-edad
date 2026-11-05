@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora de edad sencilla por año de nacimiento.">
+  <title>Calculadora de Edad</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-icon" aria-hidden="true">▦</div>
+    <div>
+      <h1>Calculadora de Edad</h1>
+      <p>Tu edad en segundos, sin complicaciones</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="side-info">
+      <div class="people-icon" aria-hidden="true">👥</div>
+      <h2>¿A quién está dirigida?</h2>
+      <p>La aplicación está dirigida a estudiantes, trabajadores y cualquier persona que necesite calcular su edad de manera rápida y sencilla.</p>
+    </aside>
+
+    <section class="calculator" aria-labelledby="main-title">
+      <h2 id="main-title">Calcula tu edad</h2>
+      <p class="intro">Ingresa el año de nacimiento y el año actual.</p>
+
+      <form id="age-form" novalidate>
+        <label for="birth-year">Año de nacimiento</label>
+        <div class="input-wrap">
+          <span aria-hidden="true">▣</span>
+          <input id="birth-year" name="birthYear" type="number" inputmode="numeric"
+                 min="1" step="1" placeholder="Ej. 2000" required>
+        </div>
+
+        <label for="current-year">Año actual</label>
+        <div class="input-wrap">
+          <span aria-hidden="true">▣</span>
+          <input id="current-year" name="currentYear" type="number" inputmode="numeric"
+                 min="1" step="1" required>
+        </div>
+
+        <button class="btn btn-calculate" type="submit">▦ Calcular edad</button>
+        <p id="message" class="message" role="alert" aria-live="polite"></p>
+      </form>
+
+      <section id="result" class="result" aria-live="polite" hidden>
+        <div class="avatar" aria-hidden="true">👤</div>
+        <div>
+          <p>Tu edad es:</p>
+          <strong id="age-value">0</strong>
+          <span id="age-unit">años</span>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="edit-btn" class="btn btn-edit" type="button">✎ Modificar</button>
+        <button id="clear-btn" class="btn btn-clear" type="button">▤ Limpiar datos</button>
+      </div>
+    </section>
+
+    <aside class="features">
+      <h2>Funcionalidades</h2>
+      <ul>
+        <li><span class="feature-dot blue">1</span><div><strong>Ingresar datos</strong><p>Permite escribir el año de nacimiento y el año actual.</p></div></li>
+        <li><span class="feature-dot green">2</span><div><strong>Calcular la edad</strong><p>Resta el año de nacimiento al año actual.</p></div></li>
+        <li><span class="feature-dot cyan">3</span><div><strong>Mostrar el resultado</strong><p>Presenta la edad calculada de forma clara.</p></div></li>
+        <li><span class="feature-dot yellow">4</span><div><strong>Modificar los datos</strong><p>Permite cambiar los años ingresados para realizar otro cálculo.</p></div></li>
+        <li><span class="feature-dot red">5</span><div><strong>Limpiar los datos</strong><p>Borra la información para comenzar de nuevo.</p></div></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>Calculadora de Edad · Proyecto HTML, CSS y JavaScript</footer>
+</body>
+</html>
